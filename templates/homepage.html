@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Homepage specific styles */
+        .homepage {
+            text-align: center;
+            margin: 50px auto;
+        }
+        .homepage h2 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+        .homepage p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 20px 0;
+        }
+        .homepage .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .homepage .feature {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 280px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .homepage .feature:hover {
+            transform: translateY(-5px);
+        }
+        .homepage .feature h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .homepage .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .homepage .feature a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .homepage .feature a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BookShop Management System</h1>
+    </header>
+    <nav>
+        <a href="">Home</a>
+        <a href="booksinfo">Books</a>
+        <a href="publisherinfo">Publishers</a>
+        <a href="warehouseinfo">Warehouses</a>
+        <a href="adminlogin">Admin Login</a>
+    </nav>
+    <div class="container">
+        <div class="homepage">
+            <h2>Welcome to the BookShop Management System</h2>
+            <p>Manage books, authors, customers, and warehouses efficiently with our platform.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Books</h3>
+                    <p>Browse and View the collection of books in the shop.</p>
+                </div>
+                <div class="feature">
+                    <h3>Authors</h3>
+                    <p>Explore and View the authors and their works.</p>
+                </div>
+                <div class="feature">
+                    <h3>Publishers</h3>
+                    <p>View publishers and their published books.</p>
+                </div>
+                <div class="feature">
+                    <h3>Warehouses</h3>
+                    <p>View stock availability across warehouses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 BookShop Management System</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouses List</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BookShop Management System</h1>
+    </header>
+
+    <div class="container">
+        <h2>Warehouses List</h2>
+        {%if warehouses%}
+        <table>
+            <thead>
+                <tr>
+                    <th>Warehouse ID</th>
+                    <th>Location</th>
+                    <th>Phone</th>
+                    <th>Book Title</th>
+                    <th>Book ISBN</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for i in warehouses%}
+                <tr>
+                    <td>{{i.warehouse_id}}</td>
+                    <td>{{i.warehouse_location}}</td>
+                    <td>{{i.warehouse_phone}}</td>
+                    <td>{{i.book_title}}</td>
+                    <td>{{i.book_isbn}}</td>                    
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        {%else%}
+        <p>No Data FOund</p>
+        {%endif%}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BookShop Management System</p>
+    </footer>
+</body>
+</html>
